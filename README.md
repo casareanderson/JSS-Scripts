@@ -23,6 +23,8 @@ This is a fork of [bp88/JSS-Scripts](https://github.com/bp88/JSS-Scripts) by Bal
 
 ## Quick start
 
+Full step-by-step setup, tested every week on a fresh machine: [docs/SETUP.md](docs/SETUP.md).
+
 You need a Jamf Pro server and Macs enrolled in it. The scripts call Jamf Helper at `/Library/Application Support/JAMF/bin/jamfHelper.app`, which the Jamf agent installs.
 
 ```bash
@@ -78,7 +80,7 @@ Exit codes are listed in each header. For example, `AppleSoftwareUpdate.sh` exit
 
 ## Status, limits and real results
 
-- **Not tested here.** No script in this fork has been run against a Mac as part of this README. The only check made (8 October 2026) is `bash -n`, which passes for every script.
+- **Not tested here.** No script in this fork has been run against a Mac as part of this README. The only automated check is a weekly syntax check with each script's own shell (`bash -n` or `zsh -n`) plus a plist parse of the LaunchDaemon, in [`setup-check`](.github/workflows/setup-check.yml). Everything parses; bash 5 warns about the here-document at `OS_Upgrade.sh` line 786.
 - **Old macOS.** The scripts target macOS 10.12 to 10.15. `tcc_reset.sh` reads the minor version number and `OS_Upgrade.sh` expects the Catalina-era installer, so expect changes for macOS 11 and later and for Apple silicon.
 - **Upstream has moved on.** [bp88/JSS-Scripts](https://github.com/bp88/JSS-Scripts) has later fixes, including Apple silicon support, and scripts this fork lacks (`OSUpdateNotifier.sh`, `Trigger_Validation_For_macOS_Installer.sh`). Use upstream for anything current.
 - **Homebrew script.** It finds the console user with `/usr/bin/python`, which Apple removed in macOS 12.3. The file also starts with a UTF-8 byte-order mark before `#!/bin/bash`, which can stop the shebang being read. Fix both before use.
@@ -88,5 +90,7 @@ Exit codes are listed in each header. For example, `AppleSoftwareUpdate.sh` exit
 
 - Scripts by **Balmes Pavlov** ([bp88](https://github.com/bp88)), from [bp88/JSS-Scripts](https://github.com/bp88/JSS-Scripts). The upstream repository has no licence file.
 - This fork has an MIT [LICENSE](LICENSE) file, added in 2026.
+
+If this fork's write-up saved you some time, [buy me a coffee](https://buymeacoffee.com/iamc_tech). The scripts themselves are Balmes Pavlov's work; star [his repo](https://github.com/bp88/JSS-Scripts) too.
 - `homebrew.sh-master/` is by Richard Purves and Tony Williams ([Honestpuck/homebrew.sh](https://github.com/Honestpuck/homebrew.sh)), under the Apache License 2.0 in [its own LICENSE](homebrew.sh-master/LICENSE).
 - `TCC.db Modifier.sh` credits a Stack Overflow answer for building the csreq blob. `tcc_reset.sh` credits a gist by haircut. `OS_Upgrade.sh` credits @dwshore for the quit-all-apps function.
