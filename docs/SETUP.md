@@ -13,6 +13,11 @@ and that the LaunchDaemon is a valid property list. That's all. Nothing here run
 nothing in this fork has been run against a Mac as part of this guide. Treat every script as untested until it has
 run on your test Mac.
 
+
+![What the check prints (from `setup-check` on 11 October 2026)](setup-run.png)
+
+*What the check prints (from `setup-check` on 11 October 2026).*
+
 ## What you need
 
 - A Jamf Pro server, admin rights to add scripts and policies, and Macs enrolled in it.
