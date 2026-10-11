@@ -6,7 +6,7 @@ Shell scripts for Mac admins running Jamf Pro: prompt users through macOS update
 
 *How `AppleSoftwareUpdate.sh` decides what to do on each run. Drawn from the script's code and header comments.*
 
-![Licence: MIT](https://img.shields.io/badge/licence-MIT-blue) ![Shell](https://img.shields.io/badge/language-shell-lightgrey) ![Status: fork snapshot](https://img.shields.io/badge/status-fork%20snapshot%20(2020)-orange)
+![Licence: MIT](https://img.shields.io/badge/licence-MIT-blue) ![Shell](https://img.shields.io/badge/language-shell-lightgrey) ![Status: fork snapshot](https://img.shields.io/badge/status-fork%20snapshot%20(2020)-orange) [![Buy Me a Coffee](https://raw.githubusercontent.com/casareanderson/.github/main/badges/bmc-yellow.svg)](https://buymeacoffee.com/iamc_tech)
 
 This is a fork of [bp88/JSS-Scripts](https://github.com/bp88/JSS-Scripts) by Balmes Pavlov. Almost every script here is his work. This fork adds one folder, `homebrew.sh-master/`, and a licence file. It has not been synced with upstream since 2020, so upstream has newer versions (see [Status](#status-limits-and-real-results)).
 
