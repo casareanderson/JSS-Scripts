@@ -107,8 +107,7 @@ if [[ ! -e /usr/local/bin/brew ]]; then
     
     # clean some directory stuff for Catalina
     chown -R root:wheel /private/tmp
-    chmod 777 /private/tmp
-    chmod +t /private/tmp
+    chmod 1777 /private/tmp
 fi
 
 # Make sure everything is up to date
