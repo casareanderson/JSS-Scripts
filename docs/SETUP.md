@@ -28,7 +28,7 @@ run on your test Mac.
 ## 1. Get the scripts and check they parse
 
 ```sh setup-check
-sudo apt-get update -qq && sudo apt-get install -y -qq zsh
+sudo apt-get update -qq && sudo apt-get install -y -qq zsh || { sleep 15 && sudo apt-get update -qq && sudo apt-get install -y -qq zsh; }
 git clone -q https://github.com/casareanderson/JSS-Scripts.git
 cd JSS-Scripts
 for f in *.sh homebrew.sh-master/*.sh; do
